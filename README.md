@@ -68,3 +68,7 @@ npm run dev:demo
 ## 全年滚动预测
 
 新增 `POST /api/fpa/insights/rolling-forecast`，汇总年初至今实际、剩余承诺和预测支出，计算全年预计、预算偏差率并输出 `ON_PLAN`、`WATCH` 或 `REFORECAST`，辅助月度经营分析。
+
+## 企业级财务预测提交治理
+
+新增 `POST /api/enterprise/fpa/forecast-submission`，覆盖对账、假设版本、责任人、抵销、审批、期限、偏差说明与情景分析，返回 `SUBMIT / REVIEW / BLOCKED`。详见 [预测提交说明](docs/ENTERPRISE_FORECAST_SUBMISSION.md)。
