@@ -1,5 +1,7 @@
 # ZhuaTech FPA｜知华科技财务规划与分析平台
 
+[简体中文](README.md) | [English](README.en.md)
+
 > 让年度预算、滚动预测、经营差异和管理行动建立在同一套数字之上。
 
 [知华科技官网](https://www.zhuatech.cn/) · [部署指南](deploy/README.md) · [API 文档](docs/api.md) · [使用许可](LICENSE)
