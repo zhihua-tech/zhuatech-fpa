@@ -1,0 +1,69 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "REVIEW",
+      "operatingVariance": "#14000",
+      "fxVariance": "#2400",
+      "totalVariance": "#16400"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "actualRate": "7"
+    },
+    "expected": {
+      "fxVariance": "#0",
+      "totalVariance": "#14000"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "actualForeign": "10000"
+    },
+    "expected": {
+      "operatingVariance": "#0",
+      "totalVariance": "#2000"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "actualForeign": "0"
+    },
+    "expected": {
+      "totalVariance": "#-70000",
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "varianceTolerance": "16400"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "budgetRate": "0"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "actualRate": "6",
+      "actualForeign": "10000"
+    },
+    "expected": {
+      "fxVariance": "#-10000",
+      "decision": "PASS"
+    },
+    "error": false
+  }
+]

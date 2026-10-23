@@ -1,0 +1,92 @@
+{
+  "slug": "fpa",
+  "title": "外币预算经营与汇率差异桥接",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "budgetForeign",
+      "label": "外币预算额",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "budgetRate",
+      "label": "预算本位币汇率",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0.000001",
+      "max": "1000000000000"
+    },
+    {
+      "key": "actualForeign",
+      "label": "外币实际额",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "actualRate",
+      "label": "实际本位币汇率",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0.000001",
+      "max": "1000000000000"
+    },
+    {
+      "key": "varianceTolerance",
+      "label": "不利差异容忍元",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    }
+  ],
+  "columns": [
+    {
+      "key": "budgetBase",
+      "label": "本位币预算"
+    },
+    {
+      "key": "actualBase",
+      "label": "本位币实际"
+    },
+    {
+      "key": "operatingVariance",
+      "label": "业务量差异"
+    },
+    {
+      "key": "fxVariance",
+      "label": "汇率差异"
+    },
+    {
+      "key": "totalVariance",
+      "label": "本位币总差异"
+    }
+  ],
+  "description": "将本位币实际与预算差异拆为预算汇率下的外币业务量差异及实际外币额下的汇率差异，保持两项精确平衡。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-24",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "budgetForeign": "10000",
+        "budgetRate": "7",
+        "actualForeign": "12000",
+        "actualRate": "7.2",
+        "varianceTolerance": "1000"
+      }
+    ]
+  }
+}
